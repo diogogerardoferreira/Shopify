@@ -132,35 +132,43 @@
         width="{{ section.settings.image_1_mobile.width }}"
         height="{{ section.settings.image_1_mobile.height }}"
       >
-      {{
-        section.settings.image_1
-        | image_url: width: 3840
-        | image_tag:
-          width: section.settings.image_1.width,
-          widths: widths,
-          height: section.settings.image_1.height,
-          alt: section.settings.image_1.alt,
-          class: 'hero__media',
-          sizes: sizes,
-          fetchpriority: fetch_priority,
-          data-testid: 'hero-desktop-image-1'
-      }}
+      {%- if section.settings.image_1 contains 'gym-and-fun' or section.settings.image_1 == 'gym-and-fun-hero.png' -%}
+        {{ 'gym-and-fun-hero.png' | asset_url | image_tag: class: 'hero__media hero__media--gym-fun', alt: 'Gym & Fun', fetchpriority: fetch_priority, data-testid: 'hero-desktop-image-1' }}
+      {%- else -%}
+        {{
+          section.settings.image_1
+          | image_url: width: 3840
+          | image_tag:
+            width: section.settings.image_1.width,
+            widths: widths,
+            height: section.settings.image_1.height,
+            alt: section.settings.image_1.alt,
+            class: 'hero__media',
+            sizes: sizes,
+            fetchpriority: fetch_priority,
+            data-testid: 'hero-desktop-image-1'
+        }}
+      {%- endif -%}
     </picture>
   {%- elsif media_1 == 'image' -%}
     <div class="{{ media_wrapper_desktop_class }}">
-      {{
-        section.settings.image_1
-        | image_url: width: 3840
-        | image_tag:
-          width: section.settings.image_1.width,
-          widths: widths,
-          height: section.settings.image_1.height,
-          alt: section.settings.image_1.alt,
-          class: 'hero__media',
-          sizes: sizes,
-          fetchpriority: fetch_priority,
-          data-testid: 'hero-desktop-image-1'
-      }}
+      {%- if section.settings.image_1 contains 'gym-and-fun' or section.settings.image_1 == 'gym-and-fun-hero.png' -%}
+        {{ 'gym-and-fun-hero.png' | asset_url | image_tag: class: 'hero__media hero__media--gym-fun', alt: 'Gym & Fun', fetchpriority: fetch_priority, data-testid: 'hero-desktop-image-1' }}
+      {%- else -%}
+        {{
+          section.settings.image_1
+          | image_url: width: 3840
+          | image_tag:
+            width: section.settings.image_1.width,
+            widths: widths,
+            height: section.settings.image_1.height,
+            alt: section.settings.image_1.alt,
+            class: 'hero__media',
+            sizes: sizes,
+            fetchpriority: fetch_priority,
+            data-testid: 'hero-desktop-image-1'
+        }}
+      {%- endif -%}
     </div>
   {%- endif -%}
 
@@ -333,17 +341,21 @@
 
 {% capture media_blurred %}
   {% if media_1 == 'image' %}
-    {{
-      section.settings.image_1
-      | image_url: width: 3840
-      | image_tag:
-        width: section.settings.image_1.width,
-        widths: widths,
-        height: section.settings.image_1.height,
-        alt: '',
-        class: 'hero__media',
-        sizes: sizes
-    }}
+    {%- if section.settings.image_1 contains 'gym-and-fun' or section.settings.image_1 == 'gym-and-fun-hero.png' -%}
+      {{ 'gym-and-fun-hero.png' | asset_url | image_tag: class: 'hero__media', alt: '' }}
+    {%- else -%}
+      {{
+        section.settings.image_1
+        | image_url: width: 3840
+        | image_tag:
+          width: section.settings.image_1.width,
+          widths: widths,
+          height: section.settings.image_1.height,
+          alt: '',
+          class: 'hero__media',
+          sizes: sizes
+      }}
+    {%- endif -%}
   {% endif %}
   {% if media_2 == 'image' %}
     {{

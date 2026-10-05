@@ -97,12 +97,35 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(18, 18, 18, 0.25) 0%,
-    rgba(18, 18, 18, 0.45) 50%,
-    rgba(18, 18, 18, 0.85) 100%
+    rgba(18, 18, 18, 0.2) 0%,
+    rgba(18, 18, 18, 0.4) 50%,
+    rgba(18, 18, 18, 0.88) 100%
   );
   pointer-events: none;
   z-index: 1;
+}
+
+/* Gym & Fun Custom Hero Emblem Graphic */
+.hero__media--gym-fun {
+  object-fit: contain !important;
+  max-width: min(780px, 92vw) !important;
+  max-height: 82% !important;
+  margin: auto !important;
+  display: block !important;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 30px rgba(255, 90, 31, 0.35));
+  animation: heroGlowPulse 5s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlowPulse {
+  0% {
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 20px rgba(255, 90, 31, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 35px rgba(255, 185, 0, 0.45));
+  }
+  100% {
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(183, 255, 0, 0.35));
+  }
 }
 
 .hero__content-wrapper {

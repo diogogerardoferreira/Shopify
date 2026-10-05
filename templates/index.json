@@ -7,7 +7,7 @@
           "type": "text",
           "name": "Badge",
           "settings": {
-            "text": "<p><span class=\"hero-badge-tag\">⚡ PERFORMANCE &amp; FITNESS TECH</span></p>",
+            "text": "<p><span class=\"hero-badge-tag\">⚡ GYM &amp; FUN — TRAIN HARD. HAVE FUN.</span></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -33,7 +33,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h1>Fitness &amp; Tecnologia</h1>",
+            "text": "<h1>Gym &amp; Fun</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -59,7 +59,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Eleva a tua performance com vestuário desportivo premium e tecnologia concebida para superar os teus limites.</p>",
+            "text": "<p>A força encontra o estilo. Vestuário desportivo premium e tecnologia desenhada para treinares com máxima intensidade e diversão.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -123,9 +123,9 @@
           "blocks": {
             "button_primary": {
               "type": "button",
-              "name": "Explorar Coleções",
+              "name": "Ver Coleções",
               "settings": {
-                "label": "Explorar Coleções",
+                "label": "Ver Coleções",
                 "link": "/collections",
                 "open_in_new_tab": false,
                 "style_class": "button",
@@ -136,9 +136,9 @@
             },
             "button_secondary": {
               "type": "button",
-              "name": "Ver Todos os Produtos",
+              "name": "Todos os Produtos",
               "settings": {
-                "label": "Ver Todos os Produtos",
+                "label": "Todos os Produtos",
                 "link": "/collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
@@ -163,7 +163,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify:\/\/shop_images\/Copilot_20260928_110048.png",
+        "image_1": "gym-and-fun-hero.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -240,7 +240,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h2>Explorar Coleções</h2><p>Equipamento desenhado para performance, conforto e estilo no treino diário.</p>",
+                "text": "<h2>As Nossas Coleções</h2><p>Explora as 3 coleções exclusivas Gym &amp; Fun.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
