@@ -1,0 +1,16 @@
+{
+  "name": "gym-and-fun-shopify-theme",
+  "version": "1.0.0",
+  "description": "Gym & Fun Official Shopify Theme",
+  "scripts": {
+    "dev": "shopify theme dev",
+    "check": "shopify theme check",
+    "push": "shopify theme push",
+    "pull": "shopify theme pull",
+    "package": "shopify theme package"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^4.8.4"
+  },
+  "private": true
+}
