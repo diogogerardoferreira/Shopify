@@ -88,6 +88,21 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
+  background: radial-gradient(ellipse at 50% 45%, #180a06 0%, #0d0604 45%, #000000 85%) !important;
+}
+
+.hero .hero__media-grid {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hero .hero__media-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* Subtle cinematic gradient vignette over media */
@@ -97,9 +112,9 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(18, 18, 18, 0.2) 0%,
-    rgba(18, 18, 18, 0.4) 50%,
-    rgba(18, 18, 18, 0.88) 100%
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 55%,
+    rgba(0, 0, 0, 0.88) 100%
   );
   pointer-events: none;
   z-index: 1;
@@ -108,11 +123,14 @@ body {
 /* Gym & Fun Custom Hero Emblem Graphic */
 .hero__media--gym-fun {
   object-fit: contain !important;
-  max-width: min(780px, 92vw) !important;
-  max-height: 82% !important;
+  max-width: min(840px, 92vw) !important;
+  max-height: 85% !important;
+  width: auto !important;
+  height: auto !important;
   margin: auto !important;
   display: block !important;
-  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 30px rgba(255, 90, 31, 0.35));
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 35px rgba(255, 90, 31, 0.45));
   animation: heroGlowPulse 5s ease-in-out infinite alternate;
 }
 
@@ -125,6 +143,13 @@ body {
   }
   100% {
     filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(183, 255, 0, 0.35));
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .hero__media--gym-fun {
+    max-width: 94vw !important;
+    max-height: 65vh !important;
   }
 }
 
